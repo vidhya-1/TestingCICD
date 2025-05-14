@@ -16,9 +16,13 @@ jobs:
       - name: List project files
         run: ls -la
 
-      - name: Check JS file exists
-        run: test -f sample.js
+      # - name: Check JS file exists
+      #   run: test -f sample.js
 
       - name: Run sample script
         run: node sample.js
+        
+      - name: Run tests
+        run: node sample.test.js
+        
 
