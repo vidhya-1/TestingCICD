@@ -1,0 +1,28 @@
+name: Simple CI for JS App
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: List project files
+        run: ls -la
+
+      # - name: Check JS file exists
+      #   run: test -f sample.js
+
+      - name: Run sample script
+        run: node sample.js
+        
+      - name: Run tests
+        run: node sample.test.js
+        
+
