@@ -18,3 +18,7 @@ jobs:
 
       - name: Check JS file exists
         run: test -f sample.js
+
+      - name: Run sample script
+        run: node sample.js
+
